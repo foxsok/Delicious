@@ -8,7 +8,7 @@ fetch('http://127.0.0.1:8000/Cafes')
     // Itera a través de los datos y crea elementos para cada uno
     data.forEach(item => {
       const menuItem = document.createElement('div');
-      menuItem.classList.add('col-lg-6', 'menu-item', 'filter-' + item.categoria);
+      menuItem.classList.add('col-lg-6', 'menu-item');
       menuItem.innerHTML = `
         <div class="menu-content">
           <span class="menu-item-name">${item.Nombre}</span><span class="menu-item-des">${item.Descripción}</span><span>${item.Precio}</span>

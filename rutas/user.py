@@ -22,7 +22,7 @@ async def create_cafes(Cafes: cafes):
     new_user = dict(Cafes)
     del new_user["id"]
     id = conn.CRUDF.Cafes.insert_one(new_user).inserted_id
-    cafes = conn.CRUDF.Leyendas.find_one({"_id": id})
+    cafes = conn.CRUDF.Cafes.find_one({"_id": id})
     return CafesEntity(cafes)
 
 
